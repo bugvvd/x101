@@ -1,0 +1,1 @@
+[Why is a Linear Equation Called Linear?](https://www.themathdoctors.org/why-is-a-linear-equation-called-linear/)
