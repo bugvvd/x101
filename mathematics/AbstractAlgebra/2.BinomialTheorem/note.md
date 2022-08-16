@@ -55,7 +55,35 @@ $$
 \dbinom{n+1}{k} = \dbinom{n}{k-1}+\dbinom{n}{k}
 $$
 
-**Proof**: induction
+**Proof**
+
+For all $n \ge 1$,
+
+$$
+(1+x)^{n} = c_{0} + c_{1}x + c_{2}x^{2} + \cdots + c_{n-1}x^{n-1} + c_{n}x^{n}
+$$
+
+Coefficient $c_{k}$ for $x^{k}$ is $\dbinom{n}{k}$ and $\dbinom{n+1}{k}$ is the coefficient for $x^{k}$ in $(1+x)^{n+1}$.
+
+Expanding $(1+x)^{n+1}$ we have, 
+$$
+\begin{align*}
+(1+x)^{n+1} &= (1+x)(1+x)^{n}\\
+&=(1+x)c_{0} + (1+x)c_{1}x + (1+x)c_{2}x^{2} + \cdots + (1+x)c_{n-1}x^{n-1} + (1+x)c_{n}x^{n}\\
+&= (c_{0} + c_{1}x + c_{2}x^{2} + \cdots + c_{n-1}x^{n-1} + c_{n}x^{n}) + x(c_{0} + c_{1}x + c_{2}x^{2} + \cdots + c_{n-1}x^{n-1} + c_{n}x^{n})\\
+&= c_{0} + (c_{0} + c_{1})x + (c_{1} + c_{2})x^{2} + \cdots + (c_{n-2} + c_{n-1})x^{n-1} +(c_{n-1} + c_{n})x^{n} + c_{n}x^{n+1}
+\end{align*}
+$$
+
+According to the expansion, for $1 \le k \le n$, we can see the coefficient for $x^{k}$ is $c_{k-1} + c_{k}$, which are $\dbinom{n}{k-1}$ and $\dbinom{n}{k}$ respectively.
+
+Thus $\dbinom{n+1}{k}$, the coefficient for $x^{k}$in $(1+x)^{n+1}$ suffices,
+
+$$
+\dbinom{n+1}{k} = \dbinom{n}{k-1}+\dbinom{n}{k}
+\blacksquare
+$$
+
 
 **Proposition 2.2.**
 

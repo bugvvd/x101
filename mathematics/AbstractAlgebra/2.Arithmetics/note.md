@@ -52,8 +52,25 @@ $$
 
 If $a$ and $b$ are integers, then $\gcd(a, b)$ is a linear combination of $a$ and $b$.
 
-**Proof**: LIA
+**Proof**: Least Integer Axiom
 
+**Corollary 2.4.**
+
+Let $I$ be a subset of $\mathbb{Z}$ such that
+
+1. $0$ is in $I$
+2. if $a$ and $b$ are in $I$ , then $a - b$ is in $I$
+3. if $a$ is in $I$ and $q$ is in $\mathbb{Z}$ , then $qa$ is in $I$
+
+Then there is a nonnegative integer $d$ in $I$ with $I$ consisting precisely of all the
+multiples of $d$.
+
+**Proof**: Least Integer Axiom
+
+
+**Theorem 2.5. (Euclid's Lemma)**
+
+**Theorem 2.6. (Euclidean Algorithm)**
 
 
 ## Equivalence Relations
