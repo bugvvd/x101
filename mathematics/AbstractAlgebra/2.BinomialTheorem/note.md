@@ -222,7 +222,42 @@ $$
 
 **Proposition 2.8.**
 
-For all $n \ge 1$, there is a polynomial $f_n(x)$ having all coefficients integers such that $\cos(nx) = f_n(\cos{x})$
+For all $n \ge 1$, there is a polynomial $f_n(x)$ having all coefficients integers such that,
+
+$$
+\cos(nx) = f_n(\cos{x})\\
+\sin(nx) = g_n(\sin{x})
+$$
 
 **Proof** BT, there is also a sin version
+
+By Theorem 2.7.,
+
+$$
+\begin{align*}
+\cos(nx) + i\sin(nx) &= (\cos{x} + i\sin{x})^{n}\\
+&= \sum_{k=0}^{n}\dbinom{n}{k}\cos^{n-k}{x}(i\sin{x})^k\\
+\end{align*} 
+$$
+
+For the equation to hold, the real part of the left side must equal that of the right side.
+
+$$
+\begin{align*}
+\cos(nx) &= \sum_{k \text{ is even}}^{n}\dbinom{n}{k}(\cos{x})^{n-k}(i\sin{x})^k\\
+&= \sum_{p=0, p \in \mathbb{Z}^{+}}^{\lfloor n/2 \rfloor}\dbinom{n}{2p}\cos^{n-2p}{x} \cdot i^{2p} \cdot \sin^{2p}{x}\\
+&= \sum_{p=0, p \in \mathbb{Z}^{+}}^{\lfloor n/2 \rfloor}(-1)^{p}\dbinom{n}{2p}\cos^{n-2p}{x}(1-\cos^2{x})^{p}\\
+\end{align*}
+$$
+
+Also for the complex part,
+
+$$
+\begin{align*}
+i\sin(nx) &= \sum_{k \text{ is odd}}^{n}\dbinom{n}{k}\cos^{n-k}{x}(i\sin{x})^k \\
+&= i\sum_{q=0, q \in \mathbb{Z}}^{\lfloor (n-1)/2 \rfloor}\dbinom{n}{2q+1}(\cos{x})^{n-(2q+1)}\sin^{2q+1}{x}\\
+&= i\sum_{q=0, q \in \mathbb{Z}}^{\lfloor (n-1)/2 \rfloor}\dbinom{n}{2q+1}(1-\sin^2{x})^{\frac{n-1}{2} + q}\sin^{2q+1}{x}\\
+\sin(nx) &= \sum_{q=0, q \in \mathbb{Z}}^{\lfloor (n-1)/2 \rfloor}\dbinom{n}{2q+1}(1-\sin^2{x})^{\frac{n-1}{2} - q}\sin^{2q+1}{x} \blacksquare\\
+\end{align*} 
+$$
 
