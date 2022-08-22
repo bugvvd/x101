@@ -201,7 +201,7 @@ If $z$ and $w$ are complex numbers, then $|zw| = |z||w|$.
 For every real number $x$ and every positive integer $n$,
 
 $$
-\cos(nx) + i\sin(nx) = (\cos{x} + i\sin{x})^{n}
+\cos{nx} + i\sin{nx} = (\cos{x} + i\sin{x})^{n}
 $$
 
 **Proof**
@@ -215,7 +215,7 @@ Assuming $\cos(nx) + i\sin(nx) = (\cos{x} + i\sin{x})^{n}$ holds for all $n > 1$
 $$
 \begin{align*}
 (\cos{x} + i\sin{x})^{n+1} &= (\cos{x} + i\sin{x})^{n}(\cos{x} + i\sin{x})\\
-&= (\cos{nx} + i\sin{nx})(\cos(x) + i\sin(x))\\
+&= (\cos{nx} + i\sin{nx})(\cos{x} + i\sin{x})\\
 &= \cos{(n+1)x} + i\sin{(n+1)x}\blacksquare\\
 \end{align*}
 $$
@@ -225,8 +225,8 @@ $$
 For all $n \ge 1$, there is a polynomial $f_n(x)$ having all coefficients integers such that,
 
 $$
-\cos(nx) = f_n(\cos{x})\\
-\sin(nx) = g_n(\sin{x})
+\cos{nx} = f_n(\cos{x})\\
+\sin{nx} = g_n(\sin{x})
 $$
 
 **Proof** BT, there is also a sin version
@@ -260,4 +260,45 @@ i\sin(nx) &= \sum_{k \text{ is odd}}^{n}\dbinom{n}{k}\cos^{n-k}{x}(i\sin{x})^k \
 \sin(nx) &= \sum_{q=0, q \in \mathbb{Z}}^{\lfloor (n-1)/2 \rfloor}\dbinom{n}{2q+1}(1-\sin^2{x})^{\frac{n-1}{2} - q}\sin^{2q+1}{x} \blacksquare\\
 \end{align*} 
 $$
+
+**Theorem 2.9. (Euler's Theorem)**
+
+For all real numbers $x$,
+
+$$
+e^{ix} = \cos{x}+i\sin{x}
+$$
+
+**Proof**
+
+The Maclaurin series of $f(x)=e^{ix}$ is,
+
+$$
+\begin{align*}
+e^{ix}&=\sum_{n=0}^{\inf}\frac{f^{(n)}(0)}{n!}(x-0)^{n}\\
+&=1+\frac{i}{1!}x+\frac{i^2}{2!}x^2+\cdots+\frac{i^n}{n!}x^{n}+\cdots\\
+&=1+ix-\frac{x^2}{2!}-\frac{ix^3}{3!}+\frac{x^4}{4!}-\frac{ix^5}{5!}+\cdots\\
+&=(1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\cdots)+i(x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots)\\
+&=\cos{x}+i\sin{x}\blacksquare\\
+\end{align*}
+$$
+
+Specially when $x = \pi$,
+
+$$
+e^{i\pi}=-1
+$$
+
+**Definition** If $n \ge 1$ is an integer, then an nth root of unity is a complex number
+$\zeta$ with $\zeta^{n} = 1$.
+
+**Corollary 2.10.** Every nth root of unity $\zeta$ is equal to,
+
+$$
+e^{2\pi ik/n} = \cos(\frac{2\pi k}{n}) + i\sin(\frac{2\pi k}{n})
+$$
+
+for some $k$ with $0 \le k \le n-1$.
+
+**Proof**:2.7. + 2.9.
 
