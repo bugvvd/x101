@@ -215,8 +215,8 @@ Assuming $\cos(nx) + i\sin(nx) = (\cos{x} + i\sin{x})^{n}$ holds for all $n > 1$
 $$
 \begin{align*}
 (\cos{x} + i\sin{x})^{n+1} &= (\cos{x} + i\sin{x})^{n}(\cos{x} + i\sin{x})\\
-&= (\cos(nx) + i\sin(nx))(\cos(x) + i\sin(x))\\
-&= cos((n+1)x) + i\sin((n+1)x)\blacksquare\\
+&= (\cos{nx} + i\sin{nx})(\cos(x) + i\sin(x))\\
+&= \cos{(n+1)x} + i\sin{(n+1)x}\blacksquare\\
 \end{align*}
 $$
 
