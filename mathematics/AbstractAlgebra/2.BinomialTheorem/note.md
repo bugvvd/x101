@@ -235,7 +235,7 @@ By Theorem 2.7.,
 
 $$
 \begin{align*}
-\cos(nx) + i\sin(nx) &= (\cos{x} + i\sin{x})^{n}\\
+\cos{nx} + i\sin{nx} &= (\cos{x} + i\sin{x})^{n}\\
 &= \sum_{k=0}^{n}\dbinom{n}{k}\cos^{n-k}{x}(i\sin{x})^k\\
 \end{align*} 
 $$
@@ -244,7 +244,7 @@ For the equation to hold, the real part of the left side must equal that of the 
 
 $$
 \begin{align*}
-\cos(nx) &= \sum_{k \text{ is even}}^{n}\dbinom{n}{k}(\cos{x})^{n-k}(i\sin{x})^k\\
+\cos{nx} &= \sum_{k \text{ is even}}^{n}\dbinom{n}{k}(\cos{x})^{n-k}(i\sin{x})^k\\
 &= \sum_{p=0, p \in \mathbb{Z}^{+}}^{\lfloor n/2 \rfloor}\dbinom{n}{2p}\cos^{n-2p}{x} \cdot i^{2p} \cdot \sin^{2p}{x}\\
 &= \sum_{p=0, p \in \mathbb{Z}^{+}}^{\lfloor n/2 \rfloor}(-1)^{p}\dbinom{n}{2p}\cos^{n-2p}{x}(1-\cos^2{x})^{p}\\
 \end{align*}
@@ -254,10 +254,10 @@ Also for the complex part,
 
 $$
 \begin{align*}
-i\sin(nx) &= \sum_{k \text{ is odd}}^{n}\dbinom{n}{k}\cos^{n-k}{x}(i\sin{x})^k \\
+i\sin{nx} &= \sum_{k \text{ is odd}}^{n}\dbinom{n}{k}\cos^{n-k}{x}(i\sin{x})^k \\
 &= i\sum_{q=0, q \in \mathbb{Z}}^{\lfloor (n-1)/2 \rfloor}\dbinom{n}{2q+1}(\cos{x})^{n-(2q+1)}\sin^{2q+1}{x}\\
 &= i\sum_{q=0, q \in \mathbb{Z}}^{\lfloor (n-1)/2 \rfloor}\dbinom{n}{2q+1}(1-\sin^2{x})^{\frac{n-1}{2} + q}\sin^{2q+1}{x}\\
-\sin(nx) &= \sum_{q=0, q \in \mathbb{Z}}^{\lfloor (n-1)/2 \rfloor}\dbinom{n}{2q+1}(1-\sin^2{x})^{\frac{n-1}{2} - q}\sin^{2q+1}{x} \blacksquare\\
+\sin{nx} &= \sum_{q=0, q \in \mathbb{Z}}^{\lfloor (n-1)/2 \rfloor}\dbinom{n}{2q+1}(1-\sin^2{x})^{\frac{n-1}{2} - q}\sin^{2q+1}{x} \blacksquare\\
 \end{align*} 
 $$
 
@@ -295,10 +295,37 @@ $\zeta$ with $\zeta^{n} = 1$.
 **Corollary 2.10.** Every nth root of unity $\zeta$ is equal to,
 
 $$
-e^{2\pi ik/n} = \cos(\frac{2\pi k}{n}) + i\sin(\frac{2\pi k}{n})
+e^{2\pi ik/n} = \cos{(2k\pi/n)} + i\sin{(2k\pi/n)}
 $$
 
 for some $k$ with $0 \le k \le n-1$.
 
-**Proof**:2.7. + 2.9.
+**Proof**
 
+By Proposition 2.4., there must exist  a factorization for $\zeta$ that 
+
+$$
+\zeta = |\zeta|(\cos{\theta}+i\sin{\theta})
+$$
+
+By Corollary 2.6., 
+
+$$
+|\zeta^{n}|=|\underbrace{\zeta \times \zeta \cdots \times \zeta}_{n}|=\underbrace{|\zeta| \times |\zeta| \times \cdots \times |\zeta|}_{n} = 1
+$$
+
+Therefore, $|\zeta| = 1, \zeta = \cos{\theta}+i\sin{\theta}$
+By De Moivre's Theorem 2.7., 
+
+$$
+\zeta^{n}= (\cos{\theta}+i\sin{\theta})^{n}=\cos{n\theta}+i\sin{n\theta}
+$$
+
+This equation holds iff $\cos{n\theta}=1$ and $\sin{n\theta}=0$. Therefore,
+
+$$
+\begin{align*}
+\theta &= 2k\pi/n\\
+\zeta &= \cos{(2k\pi/n)}+i\sin{(2k\pi/n)}=e^{2\pi ik/n}\blacksquare
+\end{align*}
+$$.
