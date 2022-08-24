@@ -210,7 +210,7 @@ $$
 If $n = 1$, $\cos{x} + i\sin{x} = (\cos{x} + i\sin{x})^{1}$
 
 *Inductive Case*
-Assuming $\cos(nx) + i\sin(nx) = (\cos{x} + i\sin{x})^{n}$ holds for all $n > 1$, using Corollary 2.6. we have,
+Assuming $\cos{nx} + i\sin{nx} = (\cos{x} + i\sin{x})^{n}$ holds for all $n > 1$, using Corollary 2.6. we have,
 
 $$
 \begin{align*}
@@ -329,3 +329,5 @@ $$
 \zeta &= \cos{(2k\pi/n)}+i\sin{(2k\pi/n)}=e^{2\pi ik/n}\blacksquare
 \end{align*}
 $$.
+
+Given $|\zeta|=1$, the all the nth roots of unity lie evenly spaced on the unit circle.
