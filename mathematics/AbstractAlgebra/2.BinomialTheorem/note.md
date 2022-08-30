@@ -289,10 +289,9 @@ $$
 e^{i\pi}=-1
 $$
 
-**Definition** If $n \ge 1$ is an integer, then an nth root of unity is a complex number
-$\zeta$ with $\zeta^{n} = 1$.
+**Definition** If $n \ge 1$ is an integer, then an $n$th root of unity is a complex number $\zeta$ with $\zeta^{n} = 1$.
 
-**Corollary 2.10.** Every nth root of unity $\zeta$ is equal to,
+**Corollary 2.10.** Every $n$th root of unity $\zeta$ is equal to,
 
 $$
 e^{2\pi ik/n} = \cos{(2k\pi/n)} + i\sin{(2k\pi/n)}
@@ -330,4 +329,37 @@ $$
 \end{align*}
 $$.
 
-Given $|\zeta|=1$, the all the nth roots of unity lie evenly spaced on the unit circle.
+Geometrically, given $|\zeta|=1$, all the $n$th roots of unity lie evenly spaced on the unit circle.
+
+By definitaion, every $\zeta$ is a root for the polynomial $x^{n}-1=0$, also
+
+$$
+x^{n}-1 = \prod_{\zeta^{n}=1}{(x-\zeta)}=0
+$$  
+
+**Definition** If $\zeta$ is an $n$th root of unity, and if $n$ is the **smallest** positive integer for which $\zeta^{n}=1$, we say that $\zeta$ is a **primitive $n$th root of unity**.
+
+**Lemma 2.11.**
+
+Let $\zeta$ be a primitive $d$th root of unity. If $\zeta^{n} = 1$, then $d$ must be a divisor of $n$.
+
+**Proof**
+
+By long division, 
+
+$$
+\begin{align*}
+n/d &= q + r/d\\
+n &= qd + r
+\end{align*}
+$$
+
+where $q \in \mathbb{N}$ and $0 \le r <d, r \in \mathbb{N}$. Then,
+
+$$
+\begin{align*}
+1 = \zeta^{n} &= \zeta^{qd+r} = (\zeta^{q})^{d}\zeta^{r} = \zeta^{r}
+\end{align*}
+$$
+
+If $r \ne 0$, $\zeta^{r} = \zeta^{d} = 1$ with $r < d$ contracts $d$ being the smallest positive integer for which $\zeta^{n}=1$. Therefore $r = 0$ and $n = qd$. $\blacksquare$ 
